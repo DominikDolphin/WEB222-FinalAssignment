@@ -19,7 +19,7 @@ window.onload = function() {
         var HeaderH4 = document.createElement("h4");
         var HeaderH4Class = document.createAttribute("class");
         HeaderH4Class.value = "my-0 font-weight-normal";
-        var HeaderH4Text = document.createTextNode(this.imgData[i].Price); // Change this <3
+        var HeaderH4Text = document.createTextNode('$' + this.imgData[i].Price); // Change this <3
         HeaderH4.appendChild(HeaderH4Text);
         HeaderH4.setAttributeNode(HeaderH4Class);
         HeaderH4.appendChild(HeaderH4Text);
@@ -69,12 +69,14 @@ window.onload = function() {
         Details.appendChild(prodSize);
 
         var prodRegular = document.createElement("li");
-        var prodRegText = document.createTextNode("Regular: " + this.imgData[i].Regular);
+        var prodRegText = document.createTextNode("Regular: $" + this.imgData[i].Regular);
+        prodRegular.style.textDecoration = "line-through";
         prodRegular.appendChild(prodRegText);
         Details.appendChild(prodRegular);
 
         var prodSalePrice = document.createElement("li");
-        var prodSalePriceText = document.createTextNode("Sale: " + this.imgData[i].Price);
+        var prodSalePriceText = document.createTextNode("Sale: $" + this.imgData[i].Price);
+        prodSalePrice.style.fontWeight = "bold";
         prodSalePrice.appendChild(prodSalePriceText);
         Details.appendChild(prodSalePrice);
 
