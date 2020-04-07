@@ -83,8 +83,8 @@ window.onload = function() {
         var phurchaseButtonType = document.createAttribute("type");
         phurchaseButtonType.value = "button";
         var phurchaseButtonClass = document.createAttribute("class");
-        phurchaseButtonClass.value = "btn btn-lg btn-block btn-outline-primary";
-        var phurchaseButtonText = document.createTextNode("Phurcase");
+        phurchaseButtonClass.value = "btn btn-lg btn-block btn-outline-success";
+        var phurchaseButtonText = document.createTextNode("Purchase");
         phurchaseButton.appendChild(phurchaseButtonText);
         phurchaseButton.setAttributeNode(phurchaseButtonType);
         phurchaseButton.setAttributeNode(phurchaseButtonClass);
