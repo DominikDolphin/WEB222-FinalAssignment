@@ -1,6 +1,7 @@
 window.onload = function() {
+    //This script creates Cards for products based on the amount
+    //of objects inside the imageData.js.
     var main = document.getElementById("ourProducts");
-
     for (var i = 0; i < imgData.length; i++) {
         console.log(imgData[i].Name);
         var productCard = document.createElement("div");
@@ -19,7 +20,7 @@ window.onload = function() {
         var HeaderH4 = document.createElement("h4");
         var HeaderH4Class = document.createAttribute("class");
         HeaderH4Class.value = "my-0 font-weight-normal";
-        var HeaderH4Text = document.createTextNode('$' + this.imgData[i].Price); // Change this <3
+        var HeaderH4Text = document.createTextNode('$' + this.imgData[i].Price);
         HeaderH4.appendChild(HeaderH4Text);
         HeaderH4.setAttributeNode(HeaderH4Class);
         HeaderH4.appendChild(HeaderH4Text);
@@ -34,7 +35,7 @@ window.onload = function() {
         var productTitle = document.createElement("h1");
         var productTitleClass = document.createAttribute("class");
         productTitleClass.value = "card-title pricing-card-title";
-        var productTitleText = document.createTextNode(this.imgData[i].Name) //Header
+        var productTitleText = document.createTextNode(this.imgData[i].Name)
         productTitle.setAttributeNode(productTitleClass);
         productTitle.appendChild(productTitleText);
         cardBody.appendChild(productTitle);
@@ -98,27 +99,3 @@ window.onload = function() {
         main.appendChild(productCard);
     }
 }
-
-
-/*
-    The DOM script replicates this
- <!-- <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">ON SALE</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">Calgary Flames</small>
-                        </h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <img class="img-fluid" src="./img/calgary.jpg" alt="Calgary Flames Hat">
-                            <li>Calgary Flames Hat</li>
-                            <li>Sizes: XS/S/M/L</li>
-                            <li>Regular: 29.99</li>
-                            <li>Sale: 21.97</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Purchase</button>
-                    </div>
-                </div>
-            </div>
-*/
